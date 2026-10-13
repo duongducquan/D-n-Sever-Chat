@@ -1,0 +1,20 @@
+{
+  "name": "ddd-chat-system",
+  "version": "1.0.0",
+  "description": "He thong chat DDD giua 2 may tren Web",
+  "scripts": {
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,cyan\" \"npm run server\" \"npm run client\"",
+    "start": "concurrently -n \"SERVER,CLIENT\" -c \"blue,cyan\" \"npm run start:server\" \"npm run start:client\"",
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "start:server": "npm --prefix server run start",
+    "start:client": "npm --prefix client run start",
+    "dev:bat": "cmd /c run_dev.bat",
+    "build:server": "npm --prefix server run build",
+    "build:client": "npm --prefix client run build",
+    "build": "npm --prefix server run build && npm --prefix client run build"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}
